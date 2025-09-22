@@ -40,6 +40,8 @@ frontend
             |-- Contact.vue
             |-- Register.vue
             |-- Login.vue
+            |-- ForgotPassword.vue
+            |-- 404NotFound.vue
     |--App.vue
 
 
@@ -57,3 +59,5 @@ npx tailwind init -p
 สร้างไฟล์ชื่อ tailwind.css ไว้ใน style/tailwind.css
 
 กำหนด path ของ tailwind.css ที่เราสร้างในไฟล์ main.js
+
+การเปลี่ยน font ใน tailwind
