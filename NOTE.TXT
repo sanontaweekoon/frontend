@@ -26,6 +26,8 @@ frontend
                 |--Foot.vue
     |   |--router
     |       |--index.js
+    |   |--services
+    |       |--AuthService.js
     |   |--layouts
             |--Frontend.vue
     |   |--styles
@@ -61,3 +63,13 @@ npx tailwind init -p
 กำหนด path ของ tailwind.css ที่เราสร้างในไฟล์ main.js
 
 การเปลี่ยน font ใน tailwind
+---
+สร้างโฟล์เดอร์ styles/tailwind.css และ import url font ที่ต้องการ
+
+การ build project vue.js เพื่อนำไปใช้งานบน production
+---
+้ต้องทำการ config path ที่จะนำไปใช้
+สร้าไฟล์ vue.config.js
+
+npm run build
+
