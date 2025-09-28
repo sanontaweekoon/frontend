@@ -156,13 +156,50 @@ export default {
             // เก็บข้อมูล user ลง localStorage
             localStorage.setItem("user", JSON.stringify(response.data));
             // เมื่อ login ผ่านส่งไปหน้า dashboard
-            this.$router.push("backend");
+
+            const Toast = this.$swal.mixin({
+              toast: true,
+              position: "top-end",
+              timer: 1500,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", this.$swal.stopTimer);
+                toast.addEventListener("mouseleave", this.$swal.resumeTimer);
+              },
+            });
+            Toast.fire({
+              icon: "success",
+              title: "กำลังเข้าสู่ระบบ",
+            }).then(() => {
+              // this.$router.push("backend");
+              window.location.href = '/backend'
+            });
           })
           .catch((error) => {
             if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
+              // console.log(error.response.data);
+              // console.log(error.response.status);
+              // console.log(error.response.headers);
+              if (error.response.status == 401) {
+                // เรียกใช้ SweetAlert2
+                const Toast = this.$swal.mixin({
+                  toast: true,
+                  position: "top-end",
+                  timer: 1500,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", this.$swal.stopTimer);
+                    toast.addEventListener(
+                      "mouseleave",
+                      this.$swal.resumeTimer
+                    );
+                  },
+                });
+                Toast.fire({
+                  icon: "error",
+                  title: "ข้อมูลเข้าระบบไม่ถูกต้อง",
+                });
+              }
             }
           });
       } else {

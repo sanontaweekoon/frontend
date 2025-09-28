@@ -21,6 +21,8 @@ frontend
     |       |--img
     |   |--components
     |       |--backend
+                |--Navbar.vue
+                |--Sidebar.vue
     |       |--frontend
                 |--Nav.vue
                 |--Foot.vue
@@ -28,12 +30,15 @@ frontend
     |       |--index.js
     |   |--services
     |       |--AuthService.js
+    |       |--BackendService.js
     |   |--layouts
             |--Frontend.vue
     |   |--styles
             |--tailwind.css
     |--views
     |   |--backend
+    |       |-- Dashboard.vue
+    |       |-- Product.vue
     |   |--frontend
             |-- About.vue
             |-- Home.vue

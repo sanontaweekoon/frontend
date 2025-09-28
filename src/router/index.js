@@ -5,6 +5,7 @@ import {
 
 // import Layouts
 import FrontendLayout from '@/layouts/Frontend.vue'
+import BackendLayout from '@/layouts/Backend.vue'
 
 // import Views
 // Frontend
@@ -19,7 +20,11 @@ import Service from '@/views/frontend/Service.vue'
 import Notfound404 from '@/views/frontend/Notfound404.vue'
 
 // Backend
+import Dashboard from '@/views/backend/Dashboard.vue'
+import Products from '@/views/backend/Products.vue'
+
 const routes = [{
+    /** FrontEnd Route */
     path: '/',
     name: 'Home',
     component: FrontendLayout,
@@ -131,6 +136,33 @@ const routes = [{
       title: '404 ไม่พบหน้านี้',
       description: 'รายละเอียดหน้า 404'
     }
+  },
+
+
+  /** Backend Route */
+  {
+    path: '/backend',
+    name: 'Dashboard',
+    component: BackendLayout,
+    children: [{
+      path: '',
+      component: Dashboard,
+      meta: {
+        title: 'Dashboard'
+      }
+    }]
+  },
+  {
+    path: '/backend/products',
+    name: 'Products',
+    component: BackendLayout,
+    children: [{
+      path: '',
+      component: Products,
+      meta: {
+        title: 'Products'
+      }
+    }]
   }
 
 ]
