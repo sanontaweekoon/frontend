@@ -64,16 +64,7 @@
           </router-link>
         </li>
       </ul>
-      <ul>
-        <li class="relative px-6 py-3">
-          <button
-            @click="onclickLogout"
-            class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-purple"
-          >
-            Logout
-          </button>
-        </li>
-      </ul>
+     
     </div>
   </aside>
 
@@ -117,29 +108,7 @@
           </a>
         </li>
       </ul>
-      <ul>
-        <li class="relative px-6 py-3">
-          <a
-            class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-          >
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-              ></path>
-            </svg>
-            <span class="ml-4">Forms</span>
-          </a>
-        </li>
-      </ul>
+      
     </div>
   </aside>
 </template>
@@ -147,11 +116,7 @@
 <script>
 export default {
   methods: {
-    onclickLogout() {
-      localStorage.removeItem("user");
-      // กลับไปหน้า login
-      window.location.href = "/login";
-    },
-  },
+    
+  }
 };
 </script>

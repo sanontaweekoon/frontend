@@ -171,8 +171,8 @@ export default {
               icon: "success",
               title: "กำลังเข้าสู่ระบบ",
             }).then(() => {
-              // this.$router.push("backend");
-              window.location.href = '/backend'
+              this.$router.push({name: 'Dashboard'});
+              // window.location.href = '/backend'
             });
           })
           .catch((error) => {

@@ -26,10 +26,10 @@ import Products from '@/views/backend/Products.vue'
 const routes = [{
     /** FrontEnd Route */
     path: '/',
-    name: 'Home',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Home',
       component: Home
     }],
     meta: {
@@ -39,10 +39,10 @@ const routes = [{
   },
   {
     path: '/about',
-    name: 'About',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'About',
       component: About
     }],
     meta: {
@@ -52,10 +52,10 @@ const routes = [{
   },
   {
     path: '/contract',
-    name: 'Contract',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Contract',
       component: Contract
     }],
     meta: {
@@ -65,10 +65,10 @@ const routes = [{
   },
   {
     path: '/forgotpassword',
-    name: 'ForgotPassword',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'ForgotPassword',
       component: ForgotPassword
     }],
     meta: {
@@ -78,10 +78,10 @@ const routes = [{
   },
   {
     path: '/login',
-    name: 'Login',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Login',
       component: Login
     }],
     meta: {
@@ -91,10 +91,10 @@ const routes = [{
   },
   {
     path: '/portfolio',
-    name: 'Portfolio',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Portfolio',
       component: Portfolio
     }],
     meta: {
@@ -104,10 +104,10 @@ const routes = [{
   },
   {
     path: '/register',
-    name: 'Register',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Register',
       component: Register
     }],
     meta: {
@@ -117,10 +117,10 @@ const routes = [{
   },
   {
     path: '/service',
-    name: 'Service',
     component: FrontendLayout,
     children: [{
       path: '',
+      name: 'Service',
       component: Service
     }],
     meta: {
@@ -142,22 +142,22 @@ const routes = [{
   /** Backend Route */
   {
     path: '/backend',
-    name: 'Dashboard',
     component: BackendLayout,
     children: [{
       path: '',
+      name: 'Dashboard',
       component: Dashboard,
-      meta: {
-        title: 'Dashboard'
-      }
-    }]
+    }],
+    meta: {
+      title: 'Dashboard'
+    }
   },
   {
-    path: '/backend/products',
-    name: 'Products',
+    path: '/backend',
     component: BackendLayout,
     children: [{
-      path: '',
+      path: 'products',
+      name: 'Products',
       component: Products,
       meta: {
         title: 'Products'
